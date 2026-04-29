@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | PPE Detection System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top, #0b1229, #050814);
+            color: #e5e7eb;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ================= NAVBAR (SAME AS TECHNOLOGY) ================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(2, 6, 23, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+            padding: 18px 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            font-weight: 500;
+            transition: transform .15s ease, opacity .15s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-links a:active {
+            transform: scale(0.94);
+            opacity: 0.85;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #f97316, #fb923c);
+            color: #020617;
+            padding: 10px 22px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* ================= PAGE ================= */
+        .about-container {
+            max-width: 1400px;
+            margin: 150px auto 80px;
+            padding: 0 40px;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .about-header h1 {
+            font-size: 44px;
+            margin-bottom: 12px;
+        }
+
+        .about-header p {
+            max-width: 900px;
+            margin: auto;
+            font-size: 16px;
+            color: #94a3b8;
+        }
+
+        /* ================= TEAM GRID ================= */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        /* ================= CARD ================= */
+        .team-card {
+            position: relative;
+            background: linear-gradient(180deg,
+                    rgba(15, 23, 42, 0.55),
+                    rgba(15, 23, 42, 0.35));
+            border-radius: 18px;
+            padding: 24px;
+            border: 1px solid rgba(71, 85, 105, 0.35);
+            transition: all .45s ease;
+            overflow: hidden;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .team-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center,
+                    rgba(249, 115, 22, 0.35),
+                    transparent 65%);
+            opacity: 0;
+            transition: opacity .45s ease;
+        }
+
+        .team-card:hover::before {
+            opacity: 1;
+        }
+
+        .team-card:hover {
+            transform: scale(1.08);
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.6);
+            border-color: rgba(148, 163, 184, 0.6);
+        }
+
+        /* ================= IMAGE ================= */
+        .profile-box {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 16px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: linear-gradient(135deg,
+                    rgba(120, 53, 15, 0.6),
+                    rgba(30, 41, 59, 0.7));
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            transition: transform .45s ease;
+        }
+
+        .team-card:hover .profile-box {
+            transform: scale(1.12);
+        }
+
+        .profile-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ================= TEXT ================= */
+        .team-name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .team-email {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #94a3b8;
+            transition: color .3s ease;
+        }
+
+        .team-card:hover .team-email {
+            color: #cbd5f5;
+        }
+
+        .mail-icon {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(56, 189, 248, 0.1);
+            color: #64748b;
+            margin-top: 80px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 1100px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">PPE Detection System</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/#features">Features</a>
+                <a href="/technology">Technology</a>
+                <!-- <a href="/about">About</a> -->
+                <a href="/demo" class="cta-btn">Live Demo →</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="about-container">
+
+        <div class="about-header">
+            <h1>About Us</h1>
+            <p>
+                Meet the team behind the PPE Detection System — a group of dedicated
+                developers working together to enhance workplace safety using AI.
+            </p>
+        </div>
+
+        <div class="team-grid">
+
+            <!-- Het -->
+            <div class="team-card">
+                <div class="profile-box">
+                    <img src="static\profile\het.jpeg" alt="Het Kachhadia">
+                </div>
+                <div class="team-name">Het Kachhadia</div>
+                <div class="team-email">
+                    <svg class="mail-icon" viewBox="0 0 24 24">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="M22 6l-10 7L2 6"></path>
+                    </svg>
+                    <a href="mailto:het.kachhdia29@gmail.com">het.kachhdia29@gmail.com</a>
+                </div>
+            </div>
+
+            <!-- Urvil -->
+            <div class="team-card">
+                <div class="profile-box">
+                    <img src="static\profile\urvil.jpeg" alt="Urvil Ranpariya">
+                </div>
+                <div class="team-name">Urvil Ranpariya</div>
+                <div class="team-email">
+                    <svg class="mail-icon" viewBox="0 0 24 24">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="M22 6l-10 7L2 6"></path>
+                    </svg>
+                    <a href="mailto:patelurvil68@gmail.com">patelurvil68@gmail.com</a>
+                </div>
+            </div>
+
+            <!-- Dhruv -->
+            <div class="team-card">
+                <div class="profile-box">
+                    <img src="static\profile\dhruv.jpeg" alt="Dhruv Rupavatiya">
+                </div>
+                <div class="team-name">Dhruv Rupavatiya</div>
+                <div class="team-email">
+                    <svg class="mail-icon" viewBox="0 0 24 24">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="M22 6l-10 7L2 6"></path>
+                    </svg>
+                    <a href="mailto:dhruv635612@gmail.com">dhruv635612@gmail.com</a>
+                </div>
+            </div>
+
+            <!-- Param -->
+            <div class="team-card">
+                <div class="profile-box">
+                    <img src="static\profile\param.jpeg" alt="Param Agara">
+                </div>
+                <div class="team-name">Param Agara</div>
+                <div class="team-email">
+                    <svg class="mail-icon" viewBox="0 0 24 24">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="M22 6l-10 7L2 6"></path>
+                    </svg>
+                    <a href="mailto:agaraparam@gmail.com">agaraparam@gmail.com</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 PPE Detection System · AI-Powered Workplace Safety
+    </div>
+
+</body>
+
+</html>
