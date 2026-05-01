@@ -30,8 +30,8 @@ It can be used for safety compliance in workplaces, public areas, and industrial
 - Python  
 - TensorFlow / Keras  
 - OpenCV  
-- NumPy  
-![Output](Screenshot 2026-04-29 125352.png)
+- NumPy
+  
 ## Project Structure
 
 - `train_model.py` – Model training script  
@@ -44,5 +44,5 @@ It can be used for safety compliance in workplaces, public areas, and industrial
 Clone the repository:
 
 ```bash
-git clone https://github.com/dhruvrupavatiya006/YOUR-REPO-NAME.git
-cd YOUR-REPO-NAME
+git clone https://github.com/dhruvrupavatiya006/PPE-Detection-model.git
+cd PPE-Detection-model
