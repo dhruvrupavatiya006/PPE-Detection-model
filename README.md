@@ -53,11 +53,7 @@ The system performs real-time PPE compliance monitoring using computer vision an
 - Safe workers are identified when all required safety equipment is detected.
 - Unsafe workers are highlighted instantly if any mandatory PPE is missing.
 - The dashboard displays real-time safety status and confidence scores.
-
-## Project Preview
-
-![Detection Result](screenshots/Screenshot 2026-04-29 125352.png)
-
+  
 ## Installation
 
 Clone the repository:
