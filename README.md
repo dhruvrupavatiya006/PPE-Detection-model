@@ -1,45 +1,59 @@
-# PPE Detection Model
+# PPE Detection System
 
-This project is a computer vision-based system that detects whether a person is wearing personal protective equipment (PPE), such as a face mask.
+This project is an AI-powered computer vision system designed to monitor Personal Protective Equipment (PPE) compliance in real time.  
+The system detects whether workers are wearing essential safety equipment such as helmets, gloves, and safety vests.
 
 ## Overview
 
-The model uses deep learning techniques to classify images into two categories:
-- With Mask
-- Without Mask
+The project uses deep learning and computer vision techniques to identify safety compliance in industrial environments.
 
-It can be used for safety compliance in workplaces, public areas, and industrial environments.
+The system can:
+- Detect workers in real time
+- Identify PPE equipment
+- Mark workers as SAFE or UNSAFE
+- Display live monitoring results with confidence scores
+
+It can be used in:
+- Factories
+- Construction sites
+- Warehouses
+- Industrial safety monitoring systems
 
 ## Features
 
-- Real-time face mask detection  
-- Image classification using a trained model  
-- Simple and modular code structure  
-- Easy to test and extend  
+- Real-time PPE detection
+- Helmet, gloves, and vest monitoring
+- SAFE / UNSAFE worker classification
+- Live dashboard monitoring
+- Confidence score display
+- Computer vision-based safety automation
+- Modular and extendable architecture
 
 ## Benefits
 
-- Helps prevent accidents in industrial environments  
-- Ensures safety compliance among workers  
-- Reduces manual monitoring effort  
-- Can be integrated with surveillance systems  
-- Promotes a safer and more responsible workplace  
+- Helps reduce workplace accidents
+- Improves industrial safety compliance
+- Reduces manual safety monitoring
+- Enables real-time violation detection
+- Can integrate with CCTV and surveillance systems
+- Promotes safer working environments
 
 ## Tech Stack
 
-- Python  
-- TensorFlow / Keras  
-- OpenCV  
+- Python
+- TensorFlow / Keras
+- OpenCV
 - NumPy
-  
+- Flask
+- YOLO (Ultralytics)
+
 ## Project Structure
 
-- `train_model.py` – Model training script  
-- `test_model.py` – Testing the trained model  
-- `model/` – Saved trained model  
-- `requirements.txt` – Dependencies  
-
-## Project Preview
+- `train_model.py` – Model training script
+- `test_model.py` – PPE detection testing
+- `model/` – Trained model files
+- `screenshots/` – Project preview images
+- `requirements.txt` – Project dependencies
 
 ## Detection Results
 
@@ -53,10 +67,8 @@ The system performs real-time PPE compliance monitoring using computer vision an
 - Safe workers are identified when all required safety equipment is detected.
 - Unsafe workers are highlighted instantly if any mandatory PPE is missing.
 - The dashboard displays real-time safety status and confidence scores.
-  
-## Installation
 
-Clone the repository:
+## Installation
 
 ```bash
 git clone https://github.com/dhruvrupavatiya006/PPE-Detection-model.git
