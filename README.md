@@ -39,6 +39,11 @@ It can be used for safety compliance in workplaces, public areas, and industrial
 - `model/` – Saved trained model  
 - `requirements.txt` – Dependencies  
 
+## Project Preview
+## Project Preview
+
+![Detection Result](screenshots/Screenshot 2026-04-29 125352.png)
+
 ## Installation
 
 Clone the repository:
