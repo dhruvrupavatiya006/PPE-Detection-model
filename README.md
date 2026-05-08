@@ -40,6 +40,11 @@ It can be used for safety compliance in workplaces, public areas, and industrial
 - `requirements.txt` – Dependencies  
 
 ## Project Preview
+
+## Project Preview
+
+![Detection Result](screenshots/detection-result.png)
+
 ## Project Preview
 
 ![Detection Result](screenshots/Screenshot 2026-04-29 125352.png)
