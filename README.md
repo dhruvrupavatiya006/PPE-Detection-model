@@ -41,14 +41,18 @@ It can be used for safety compliance in workplaces, public areas, and industrial
 
 ## Project Preview
 
-## Live PPE Monitoring Demo
+## Detection Results
 
 <p align="center">
-  <img src="screenshots/detection-result.png" width="900"/>
+  <img src="screenshots/detection-result.png" width="45%">
+  <img src="screenshots/detection-model-2.png" width="45%">
 </p>
 
-The system detects whether workers are wearing required safety equipment such as helmets, gloves, and safety vests in real time.  
-Unsafe workers are highlighted instantly to improve workplace safety and reduce accidents.
+The system performs real-time PPE compliance monitoring using computer vision and deep learning.
+
+- Safe workers are identified when all required safety equipment is detected.
+- Unsafe workers are highlighted instantly if any mandatory PPE is missing.
+- The dashboard displays real-time safety status and confidence scores.
 
 ## Project Preview
 
