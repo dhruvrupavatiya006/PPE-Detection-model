@@ -43,7 +43,7 @@ It can be used for safety compliance in workplaces, public areas, and industrial
 
 ## Project Preview
 
-![Detection Result](screenshots/detection-result.png)
+![Detection Result](detection-result.png)
 
 ## Project Preview
 
