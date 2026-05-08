@@ -41,9 +41,14 @@ It can be used for safety compliance in workplaces, public areas, and industrial
 
 ## Project Preview
 
-## Project Preview
+## Live PPE Monitoring Demo
 
-![Detection Result](detection-result.png)
+<p align="center">
+  <img src="screenshots/detection-result.png" width="900"/>
+</p>
+
+The system detects whether workers are wearing required safety equipment such as helmets, gloves, and safety vests in real time.  
+Unsafe workers are highlighted instantly to improve workplace safety and reduce accidents.
 
 ## Project Preview
 
